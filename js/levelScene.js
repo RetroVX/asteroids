@@ -11,14 +11,14 @@ export default class levelScene extends Phaser.Scene {
     }
 
     preload() {
-        this.load.image("ship", "../assets/ship.png");
-        this.load.image("bullets", "../assets/ball.png");
-        this.load.image("orangeBall", "../assets/orangeBall.png");
-        this.load.image("redBall", "../assets/redBall.png");
-        this.load.image("ship", "../assets/ship.png");
-        this.load.image("asteroid", "../assets/ball.png");
-        this.load.atlas('particles', '../assets/particles.png', '../assets/particles.json');
-        this.load.scenePlugin('WeaponPlugin', '../lib/WeaponPlugin.js', null, 'weapons');
+        this.load.image("ship", "assets/ship.png");
+        this.load.image("bullets", "assets/ball.png");
+        this.load.image("orangeBall", "assets/orangeBall.png");
+        this.load.image("redBall", "assets/redBall.png");
+        this.load.image("ship", "assets/ship.png");
+        this.load.image("asteroid", "assets/ball.png");
+        this.load.atlas('particles', 'assets/particles.png', 'assets/particles.json');
+        this.load.scenePlugin('WeaponPlugin', 'lib/WeaponPlugin.js', null, 'weapons');
     }
 
     create() {
