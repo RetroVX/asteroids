@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<title>Bullet Hell Asteroids</title>
+	<link rel="stylesheet" href="css/main.css">
+	<script type="text/javascript" src="lib/vue.min.js"></script>
+	<script type="text/javascript" src="lib/phaser.min.js"></script>
+	<script src="js/game.js" type="module"></script>
+	<style>
+		@font-face {
+			font-family: gameFont;
+			src: url('fonts/GravityBold8.ttf');
+			font-weight: bold;
+		}
+	</style>
+
+</head>
+
+<body>
+	<div id="wrapper">
+
+		<div id="left">
+			<div id="gameCanvas"></div>
+			<p>Arrow Keys to move. Spacebar to shoot</p>
+			<p>'P' to pause, 'F' for autofire</p>
+		</div>
+		<div id="right">
+			<div id="infoPanel">
+				<h1 style="text-align: center;">Bullet Hell Asteroids</h1>
+				<br>
+				<h1 id="scoreOne">Score: {{score}}</h1>
+				<h1 id="multiplier">Multiplier: {{multiplier}}</h1>
+				<h1 id="lives">Lives: {{lives}}</h1>
+				<br>
+				<h1>High Scores:</h1>
+				<table>
+					<tr class="highScores" v-for="score in highScores">
+						<td v-bind:class="{'newHighScore' : score.newScore === true}" v-on:animationend="removeClass(score)">
+							{{ score.value }}</td>
+					</tr>
+				</table>
+				<ul id="links">
+					<li><a style="color:inherit" href="https://github.com/RetroVX/asteroids">Github</a></li>
+				</ul>
+			</div>
+
+		</div>
+
+	</div>
+</body>
+
+</html>

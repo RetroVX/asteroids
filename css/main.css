@@ -1,0 +1,115 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}		
+body {
+    margin: 0;
+    background: #e9e9e9;
+    font-family: gameFont;
+    font-size: 2em;
+}
+
+#wrapper {
+    display: flex;
+    margin-top: 3%;
+}
+
+#left {
+    flex: 0 0 55%;
+}
+
+#right {
+    flex: 1;
+}
+
+.highScores {
+    list-style-type: none;
+}
+
+#links {
+    position: absolute;
+    bottom: 1%;
+    right: 1%;
+    display: inline-flex;
+    list-style-type: none;
+
+}
+
+canvas {
+    border: 5px solid;
+    border: 3px solid gainsboro;
+    padding: 0;
+    margin:0 auto;
+    margin-bottom: 1%;	
+    display: block;
+}
+
+h1 {
+    font-family: gameFont;
+    font-size: 2.2vw; 
+    color: #424340;
+}
+
+p {
+    font-family: gameFont;
+    font-size: 1vw;
+    color: #424340;
+    text-align: center;
+
+}
+
+li {
+    font-family: gameFont;
+    font-size: 1.1vw;
+    color: #424340;
+
+}
+
+#gameCanvas {
+    position: relative;
+}
+
+table {
+    border-collapse: collapse;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+td,
+th {
+    font-size: 1.5vw;
+    padding: 6px;
+    text-align: left
+}
+
+th {
+    border-bottom: 1px solid gainsboro;
+}
+
+tbody tr:nth-child(2n) {
+    background-color: gainsboro;
+}
+
+.newHighScore {
+    animation: fadeInOut 0.25s 15;
+}
+
+@keyframes fadeInOut{
+    0% {
+        opacity: 1;
+    }  
+    25% {
+        opacity: 0.75;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    75% {
+        opacity: 0.75;
+    }
+    100% {
+        opacity: 1;
+    }
+
+}
